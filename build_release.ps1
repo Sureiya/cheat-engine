@@ -1,5 +1,5 @@
-$cePath = "C:\projects\cheat-engine\Cheat Engine\"
-
+$cePath =  "$($args[0] ??= 'C:\projects\cheat-engine')\Cheat Engine\"
+APPVEYOR_BUILD_FOLDER
 $projects = @()
 $projects += ,@("cecore.lpi", "Default", "", "")
 $projects += ,@("cheatengine.lpi", "Release 32-Bit", "Release 64-Bit", "Release 64-Bit O4 AVX2")
