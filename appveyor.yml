@@ -18,7 +18,7 @@ install:
       rmdir /S /Q c:\lazarus\examples
 
 build_script:
-  - ps: .\build_release.ps1
+  - ps: .\build_release.ps1 %APPVEYOR_BUILD_FOLDER%
 
 after_build:
   - tree /F "Cheat Engine\bin"
